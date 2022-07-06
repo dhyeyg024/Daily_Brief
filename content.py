@@ -31,8 +31,8 @@ def get_article():
 
 def get_twitter_trends(woeid = 2282863):
     try:
-        api_key = "vVtKyt89aSspTHmUjf40mILQW"
-        api_secret_key = "X7T4GssVX0OLuozROuJAuwUFN3LNVFAiCrwZFWbSWrlOql4tvg"
+        api_key = "YOUR API_KEY HERE"
+        api_secret_key = "YOUR API_SECRET_KEY HERE"
         auth = tw.AppAuthHandler(api_key,api_secret_key)
         return tw.API(auth).get_place_trends(woeid)[0]["trends"]
 
@@ -41,7 +41,7 @@ def get_twitter_trends(woeid = 2282863):
 
 def get_weather_forecast(coords={"lat":21.77445,"lon":72.1525}):
     try:
-        api_key = "00477cec11a6d15cf63edc19d2fe9dd2"
+        api_key = "YOUR API_KEY HERE"
         url = f'https://api.openweathermap.org/data/2.5/forecast?lat={coords["lat"]}&lon={coords["lon"]}&appid={api_key}&units=metric'
         data = json.load(request.urlopen(url))
 
